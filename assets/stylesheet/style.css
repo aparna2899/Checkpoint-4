@@ -129,21 +129,19 @@ table {
   --bg: #fef9f7;
   --text: #635551;
 }
-
-html {
-  font-size: 16px;
-}
-/*My Resets*/
+/*Custom Styles*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+}
 body {
   line-height: 1.5;
   font-family: "Raleway", sans-serif;
 }
-/*Custom Styles*/
 .container {
   max-width: 1350px;
   margin: 0 auto;
@@ -329,7 +327,6 @@ p {
   color: white;
   width: 97%;
 }
-
 .hero p {
   font-size: 1.3rem;
   font-weight: 500;
@@ -349,7 +346,7 @@ p {
 .circle .fas {
   font-size: 1.2rem;
 }
-.start-btn span {
+.start-btn strong {
   background: rgba(0, 0, 0, 0.3);
   color: white;
   font-weight: 600;
@@ -361,7 +358,7 @@ p {
 .start-btn {
   margin-top: 3rem;
 }
-.span:hover {
+.start-btn:hover strong {
   background: var(--primary);
 }
 .start-btn :hover .circle {
@@ -551,19 +548,26 @@ iframe {
   margin: 1rem 0;
   font-weight: 500;
 }
-.values-text a {
+.values-text span {
   text-transform: uppercase;
   color: var(--text);
   font-size: 0.8rem;
   font-weight: 600;
+  vertical-align: sub;
+}
+.values-text .fas {
+  font-size: 0.5rem;
+  margin-right: 0.3rem;
 }
 .values-content:hover .values-text,
-.values-content:hover a,
+.values-content:hover span,
 .values-content:hover p {
   background: var(--primary);
   color: white;
 }
-
+.values-content:hover .values-text .fas {
+  color: white;
+}
 /*Testimonials*/
 .testimonial {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -702,13 +706,25 @@ blockquote .fas {
   color: #a5a4a4;
   font-weight: 500;
 }
-.ultimate {
-  position: relative;
-}
 .list {
   margin-bottom: 2rem;
 }
-
+.ultimate {
+  position: relative;
+  overflow: hidden;
+}
+.ribbon {
+  position: absolute;
+  right: -4rem;
+  top: 2rem;
+  height: 1.5rem;
+  width: 13rem;
+  transform: rotate(45deg);
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
 .btn-secondary {
   background: var(--primary);
   padding: 0.3rem 2rem;
@@ -743,9 +759,12 @@ blockquote .fas {
   color: rgba(250, 144, 123, 0.7);
   margin-right: 0.4rem;
 }
-.questions strong:hover {
+.questions:hover,
+.questions:hover .far,
+.questions:hover .fas {
   color: var(--primary);
 }
+
 /*Contact*/
 .contact-details-container {
   width: 80%;
@@ -817,6 +836,7 @@ textarea {
 .send-btn:hover {
   background: rgb(231, 106, 80);
 }
+
 /*Footer*/
 .footer {
   background: var(--bg);
