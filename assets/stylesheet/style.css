@@ -167,6 +167,7 @@ body {
 .wrap {
   flex-wrap: wrap;
 }
+/*Columns*/
 .flex-10 {
   flex: 0 1 10%;
 }
@@ -221,7 +222,6 @@ a {
 }
 .btn {
   color: white;
-
   display: inline-block;
 }
 .btn-primary {
@@ -272,7 +272,6 @@ p {
 .header a {
   color: var(--text);
 }
-
 .navbar a:hover {
   color: var(--primary);
 }
@@ -344,7 +343,6 @@ p {
   background: var(--primary);
   color: white;
   position: relative;
-
   text-align: center;
   line-height: 3.5rem;
 }
@@ -473,15 +471,23 @@ iframe {
 .client {
   position: relative;
 }
-
 .client-img {
   filter: grayscale(10);
 }
-.client-img img {
-}
-
 .client-img:hover {
   filter: grayscale(0);
+}
+.nav-circles {
+  width: 100%;
+  font-size: 0.6rem;
+  margin-top: 2rem;
+}
+.nav-circles .fas {
+  margin: 0 0.1rem;
+  color: #a2a1a1;
+}
+.nav-circles .active {
+  color: var(--primary);
 }
 /*Services*/
 .services {
@@ -587,17 +593,23 @@ iframe {
   padding: 0 4rem;
   margin-top: 1rem;
 }
+blockquote .fas {
+  color: rgba(162, 161, 161, 0.8);
+  display: inline-block;
+  margin: 0 0.7rem;
+}
 /*Portfolio*/
 .portfolio a {
   text-transform: uppercase;
-  margin: 2rem 1.5rem;
+  margin: 2rem 1rem;
   color: var(--text);
   font-weight: 600;
+  padding: 0.3rem 0.7rem;
 }
+.portfolio a:hover,
 .portfolio .all {
   background: rgba(234, 83, 51, 0.1);
   color: var(--primary);
-  padding: 0.3rem 1rem;
   border-radius: 1rem;
 }
 .portfolio-content {
@@ -662,6 +674,8 @@ iframe {
 /*Pricing*/
 .categories {
   margin-top: 1rem;
+  border: 2px solid #f3f2f2;
+  border-radius: 6px;
 }
 .categories strong {
   display: block;
@@ -676,6 +690,9 @@ iframe {
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
+.categories li {
+  margin-top: 1rem;
+}
 .categories .accent {
   font-size: 2.4rem;
   font-weight: 700;
@@ -685,16 +702,13 @@ iframe {
   color: #a5a4a4;
   font-weight: 500;
 }
+.ultimate {
+  position: relative;
+}
 .list {
   margin-bottom: 2rem;
 }
-.categories {
-  border: 2px solid #f3f2f2;
-  border-radius: 6px;
-}
-.categories li {
-  margin-top: 1rem;
-}
+
 .btn-secondary {
   background: var(--primary);
   padding: 0.3rem 2rem;
@@ -728,6 +742,9 @@ iframe {
 .questions .far {
   color: rgba(250, 144, 123, 0.7);
   margin-right: 0.4rem;
+}
+.questions strong:hover {
+  color: var(--primary);
 }
 /*Contact*/
 .contact-details-container {
@@ -969,6 +986,56 @@ input {
 }
 /*Media Queries*/
 
+@media screen and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  #toggle:checked ~ .navbar {
+    display: inline-block;
+  }
+  .bars {
+    font-size: 2.3rem;
+    color: var(--primary);
+    position: fixed;
+    top: 1.2rem;
+    right: 3rem;
+    z-index: 5;
+    display: inline-block;
+  }
+  .header {
+    position: fixed;
+    width: 100%;
+    background: white;
+    height: 5rem;
+    z-index: 9;
+  }
+  .header .logo {
+    position: fixed;
+    top: 0.5rem;
+    left: 3rem;
+    z-index: 5;
+  }
+  .navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(232, 238, 220, 0.95);
+    z-index: 4;
+    padding-top: 8rem;
+    text-align: center;
+  }
+  .navbar li a {
+    margin: 0.7rem;
+  }
+  .navbar .deepdropdown-content {
+    min-width: 10rem;
+    left: 8.5rem;
+  }
+}
 @media screen and (max-width: 768px) and (min-width: 415px) {
   html {
     font-size: 14px;
@@ -994,50 +1061,17 @@ input {
   .margin {
     margin: 1rem 0;
   }
-  /*Navbar*/
-  .navbar {
-    display: none;
+  .navbar a {
+    font-size: 1.8rem;
   }
-  #toggle:checked ~ .navbar {
-    display: inline-block;
+  .dropdown-content {
+    min-width: 15rem;
   }
-  .bars {
-    font-size: 2.3rem;
-    color: var(--primary);
-    position: fixed;
-    top: 1.2rem;
-    right: 3rem;
-    z-index: 5;
-    display: inline-block;
+  .deepdropdown-content {
+    min-width: 18rem;
   }
-  .header {
-    position: fixed;
-    width: 100%;
-    background: white;
-    height: 5rem;
-  }
-  .header .logo {
-    position: fixed;
-    top: 0.5rem;
-    left: 3rem;
-    z-index: 5;
-  }
-  .navbar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(232, 238, 220, 0.95);
-    z-index: 4;
-    padding-top: 10rem;
-    text-align: center;
-  }
-  .navbar li a {
-    margin: 1rem;
-    font-size: 1.5rem;
+  .deepdropdown-content {
+    left: 14rem;
   }
   /*Hero*/
   .hero {
@@ -1071,6 +1105,7 @@ input {
   .contact-details a {
     display: block;
   }
+  /*Footer*/
   .footer-secondary {
     text-align: center;
   }
@@ -1112,50 +1147,10 @@ input {
   .sm-margin-b {
     margin-bottom: 1rem;
   }
-  .navbar {
-    display: none;
+  .navbar a {
+    font-size: 1.1rem;
   }
-  #toggle:checked ~ .navbar {
-    display: inline-block;
-  }
-  .bars {
-    font-size: 2.3rem;
-    color: var(--primary);
-    position: fixed;
-    top: 1.2rem;
-    right: 3rem;
-    z-index: 5;
-    display: inline-block;
-  }
-  .header {
-    position: fixed;
-    width: 100%;
-    background: white;
-    height: 5rem;
-  }
-  .header .logo {
-    position: fixed;
-    top: 0.5rem;
-    left: 3rem;
-    z-index: 5;
-  }
-  .navbar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(232, 238, 220, 0.95);
-    z-index: 4;
-    padding-top: 10rem;
-    text-align: center;
-  }
-  .navbar li a {
-    margin: 1rem;
-    font-size: 1.5rem;
-  }
+  /*Hero*/
   .hero {
     width: 100%;
     height: 70vh;
@@ -1164,6 +1159,7 @@ input {
   .hero h1 {
     font-size: 2.2rem;
   }
+  /*About*/
   .small-box {
     margin-top: 1.5rem;
   }
@@ -1171,15 +1167,18 @@ input {
     padding: 2rem 0;
     margin: 0;
   }
+  /*Client*/
   .gallery {
     justify-content: center;
   }
   .client-img {
     margin: 0 2.5rem;
   }
+  /*FAQ*/
   .faq-container {
     width: 100%;
   }
+  /*Footer*/
   .footer-secondary {
     text-align: center;
   }
@@ -1189,6 +1188,7 @@ input {
   .menu {
     padding-top: 6rem;
   }
+  /*Blog*/
   .blog {
     height: 42rem;
   }

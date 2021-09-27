@@ -203,7 +203,7 @@
       </section>
       <section class="client padding">
         <div class="container">
-          <div class="gallery flex">
+          <figure class="gallery flex">
             <div class="client-img flex-10 invisible sm-flex-30">
               <img
                 class="width-full"
@@ -260,7 +260,11 @@
                 alt="grabyo"
               />
             </div>
-          </div>
+          </figure>
+          <figure class="nav-circles center">
+            <i class="fas fa-circle active"></i>
+            <i class="fas fa-circle"></i>
+          </figure>
         </div>
       </section>
       <section class="services padding" id="services">
@@ -397,12 +401,21 @@
             <strong>Jena Karlis</strong>
             <span>Store Owner</span>
             <blockquote>
+              <i class="fas fa-quote-left"></i>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
               alias repellat nam aliquam obcaecati accusamus, fugit numquam ut
               exercitationem, doloremque dolore tempora corporis quod deserunt
               doloribus in delectus illum reiciendis?
+              <i class="fas fa-quote-right"></i>
             </blockquote>
           </div>
+          <figure class="nav-circles center">
+            <i class="fas fa-circle active"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+          </figure>
         </div>
       </section>
       <section class="portfolio padding" id="portfolio">
@@ -452,8 +465,8 @@
               />
               <div class="card flex">
                 <div>
-                  <h4>Card 1</h4>
-                  <span>Card</span>
+                  <h4>Web 1</h4>
+                  <span>Web</span>
                 </div>
                 <figure class="card-icons">
                   <i class="fas fa-plus"></i>
@@ -471,8 +484,8 @@
               />
               <div class="card flex">
                 <div>
-                  <h4>Card 1</h4>
-                  <span>Card</span>
+                  <h4>App 1</h4>
+                  <span>App</span>
                 </div>
                 <figure class="card-icons">
                   <i class="fas fa-plus"></i>
@@ -490,7 +503,7 @@
               />
               <div class="card flex">
                 <div>
-                  <h4>Card 1</h4>
+                  <h4>Card 2</h4>
                   <span>Card</span>
                 </div>
                 <figure class="card-icons">
@@ -509,8 +522,8 @@
               />
               <div class="card flex">
                 <div>
-                  <h4>Card 1</h4>
-                  <span>Card</span>
+                  <h4>Web 2</h4>
+                  <span>Web</span>
                 </div>
                 <figure class="card-icons">
                   <i class="fas fa-plus"></i>
@@ -528,8 +541,8 @@
               />
               <div class="card flex">
                 <div>
-                  <h4>Card 1</h4>
-                  <span>Card</span>
+                  <h4>App 2</h4>
+                  <span>App</span>
                 </div>
                 <figure class="card-icons">
                   <i class="fas fa-plus"></i>
@@ -547,7 +560,7 @@
               />
               <div class="card flex">
                 <div>
-                  <h4>Card 1</h4>
+                  <h4>Card 3</h4>
                   <span>Card</span>
                 </div>
                 <figure class="card-icons">
@@ -566,8 +579,8 @@
               />
               <div class="card flex">
                 <div>
-                  <h4>Card 1</h4>
-                  <span>Card</span>
+                  <h4>Web 3</h4>
+                  <span>Web</span>
                 </div>
                 <figure class="card-icons">
                   <i class="fas fa-plus"></i>
@@ -585,8 +598,8 @@
               />
               <div class="card flex">
                 <div>
-                  <h4>Card 1</h4>
-                  <span>Card</span>
+                  <h4>App 3</h4>
+                  <span>App</span>
                 </div>
                 <figure class="card-icons">
                   <i class="fas fa-plus"></i>
@@ -734,7 +747,7 @@
                 <a class="btn btn-secondary" href="#">Buy Now</a>
               </div>
             </div>
-            <div class="categories flex-24 center flex-48 sm-flex-100">
+            <div class="categories flex-24 center flex-48 sm-flex-100 ultimate">
               <strong>Ultimate</strong>
               <div class="list">
                 <span class="accent">49</span><span> / month</span>
@@ -767,7 +780,7 @@
               <div class="flex">
                 <div>
                   <i class="far fa-question-circle"></i>
-                  <strong
+                  <strong class="active"
                     >Lorem ipsum dolor sit amet consectetur, adipisicing
                     elit.</strong
                   >
@@ -934,7 +947,7 @@
     <footer class="footer padding">
       <div class="container">
         <div class="footer-primary flex item-start wrap sm-wrap">
-          <div class="flex-22 flex-49 sm-flex-100">
+          <div class="flex-22 flex-48 sm-flex-100">
             <strong class="footer-logo">Flexor</strong>
             <address class="margin-b">
               A108 Adam Street <br />
@@ -944,17 +957,19 @@
             <div><strong>Phone:</strong>+1 5589 55488 55</div>
             <div><strong>Email:</strong>info@example.com</div>
           </div>
-          <div class="flex-22 flex-49 margin sm-flex-100 sm-margin">
+          <div class="flex-22 flex-48 margin sm-flex-100 sm-margin">
             <h5>Useful Links</h5>
             <ul>
               <li>
-                <a href="#"><i class="fas fa-angle-right"></i>Home</a>
+                <a href="#home"><i class="fas fa-angle-right"></i>Home</a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-angle-right"></i>About us</a>
+                <a href="#about"><i class="fas fa-angle-right"></i>About us</a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-angle-right"></i>Services</a>
+                <a href="#services"
+                  ><i class="fas fa-angle-right"></i>Services</a
+                >
               </li>
               <li>
                 <a href="#"
@@ -966,7 +981,7 @@
               </li>
             </ul>
           </div>
-          <div class="flex-24 flex-49 margin sm-flex-100 sm-margin">
+          <div class="flex-24 flex-48 margin sm-flex-100 sm-margin">
             <h5>Our Services</h5>
             <ul>
               <li>
@@ -990,7 +1005,7 @@
               </li>
             </ul>
           </div>
-          <div class="flex-30 flex-49 sm-flex-100">
+          <div class="flex-30 flex-48 sm-flex-100">
             <h5>Join Our Newsletter</h5>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
